@@ -185,7 +185,7 @@ namespace EmitMapper.Mappers
         {
             var mi = typeof(MapperForCollectionImpl).GetMethod(
                copyMethodName,
-               BindingFlags.Instance | BindingFlags.Public
+               BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic
             ).MakeGenericMethod(new Type[] { ExtractElementType(copiedObjectType) });
 
             return new AstReturn()
